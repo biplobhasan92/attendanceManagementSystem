@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D27E73C9-36B0-4C94-B9BE-CB28EF4E0C46}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Panchrukhi</RootNamespace>
+    <AssemblyName>Panchrukhi</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>C:\deploy\Panchrukhi\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Panchrukhi.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Interop.zkemkeeper">
+      <HintPath>.\Interop.zkemkeeper.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.109.2\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.109.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.109.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\DatabaseConnection.cs" />
+    <Compile Include="dsTemp.cs">
+      <DependentUpon>dsTemp.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsTemp.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTemp.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddNewMachine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddNewMachine.Designer.cs">
+      <DependentUpon>frmAddNewMachine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\AppMainPersonTab.cs" />
+    <Compile Include="frmAppStarter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAppStarter.Designer.cs">
+      <DependentUpon>frmAppStarter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAppMainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAppMainWindow.Designer.cs">
+      <DependentUpon>frmAppMainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrystalReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrystalReportViewer.Designer.cs">
+      <DependentUpon>frmCrystalReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHolidayCat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHolidayCat.designer.cs">
+      <DependentUpon>frmHolidayCat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogIn.designer.cs">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManualAttendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManualAttendance.designer.cs">
+      <DependentUpon>frmManualAttendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAttendanceProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAttendanceProcess.designer.cs">
+      <DependentUpon>frmAttendanceProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClassData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClassData.designer.cs">
+      <DependentUpon>frmClassData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDesigData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDesigData.designer.cs">
+      <DependentUpon>frmDesigData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPData.designer.cs">
+      <DependentUpon>frmPData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPersonalPromotion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPersonalPromotion.designer.cs">
+      <DependentUpon>frmPersonalPromotion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportPersonalInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportPersonalInfo.Designer.cs">
+      <DependentUpon>frmReportPersonalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCategoryData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCategoryData.Designer.cs">
+      <DependentUpon>frmCategoryData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSectionData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSectionData.designer.cs">
+      <DependentUpon>frmSectionData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetHoliday.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetHoliday.designer.cs">
+      <DependentUpon>frmSetHoliday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetWeekend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetWeekend.designer.cs">
+      <DependentUpon>frmSetWeekend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSlotData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSlotData.Designer.cs">
+      <DependentUpon>frmSlotData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IPStatusCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IPStatusCheck.designer.cs">
+      <DependentUpon>IPStatusCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rptAttendanceData.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptAttendanceData.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="crptPersonalInfo.cs">
+      <DependentUpon>crptPersonalInfo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <EmbeddedResource Include="frmAddNewMachine.resx">
+      <DependentUpon>frmAddNewMachine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAppStarter.resx">
+      <DependentUpon>frmAppStarter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAppMainWindow.resx">
+      <DependentUpon>frmAppMainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrystalReportViewer.resx">
+      <DependentUpon>frmCrystalReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHolidayCat.resx">
+      <DependentUpon>frmHolidayCat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogIn.resx">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManualAttendance.resx">
+      <DependentUpon>frmManualAttendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAttendanceProcess.resx">
+      <DependentUpon>frmAttendanceProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClassData.resx">
+      <DependentUpon>frmClassData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDesigData.resx">
+      <DependentUpon>frmDesigData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPData.resx">
+      <DependentUpon>frmPData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPersonalPromotion.resx">
+      <DependentUpon>frmPersonalPromotion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportPersonalInfo.resx">
+      <DependentUpon>frmReportPersonalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCategoryData.resx">
+      <DependentUpon>frmCategoryData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSectionData.resx">
+      <DependentUpon>frmSectionData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetHoliday.resx">
+      <DependentUpon>frmSetHoliday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetWeekend.resx">
+      <DependentUpon>frmSetWeekend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSlotData.resx">
+      <DependentUpon>frmSlotData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IPStatusCheck.resx">
+      <DependentUpon>IPStatusCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="rptAttendanceData.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAttendanceData.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crptPersonalInfo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crptPersonalInfo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="dsTemp.xsc">
+      <DependentUpon>dsTemp.xsd</DependentUpon>
+    </None>
+    <None Include="dsTemp.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTemp.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsTemp.xss">
+      <DependentUpon>dsTemp.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FKLIT.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.109.2\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
+</Project>
